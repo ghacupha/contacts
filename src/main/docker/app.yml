@@ -15,7 +15,7 @@ services:
       - PG_DATABASE_DEV_USER=${PG_DATABASE_DEV_USER}
       - PG_DATABASE_DEV_PASSWORD=${PG_DATABASE_DEV_PASSWORD}
     ports:
-      - 8080:8080
+      - 21000:21000
   contacts-postgresql:
     extends:
       file: postgresql.yml
