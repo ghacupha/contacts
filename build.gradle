@@ -316,7 +316,7 @@ dependencies {
     testImplementation "com.tngtech.archunit:archunit-junit5-api:${archunit_junit5_version}"
     testRuntimeOnly "com.tngtech.archunit:archunit-junit5-engine:${archunit_junit5_version}"
     implementation "org.projectlombok:lombok:${lombok_version}"
-    compile group: 'com.github.ozlerhakan', name: 'poiji', version: '3.0.0'
+    implementation "com.github.ozlerhakan:poiji:${poiji_version}"
     testImplementation "com.h2database:h2"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 }
