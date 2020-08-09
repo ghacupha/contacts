@@ -108,6 +108,16 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="about/contacts" (click)="collapseNavbar()">
+                    <span>
+                        <fa-icon icon="eye"></fa-icon>
+                        <span jhiTranslate="global.menu.about">
+                            About
+                        </span>
+                    </span>
+                </a>
+            </li>
             <li ngbDropdown class="nav-item dropdown pointer" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
                     <span *ngIf="!getImageUrl()">

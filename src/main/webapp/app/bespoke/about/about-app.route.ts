@@ -5,10 +5,10 @@ import { AboutComponent } from 'app/bespoke/about/about.component';
  * Route for the about component
  */
 export const ABOUT_APP_ROUTE: Route = {
-  path: 'reports',
+  path: 'contacts',
   component: AboutComponent,
   data: {
     authorities: [],
-    pageTitle: 'Reports System',
+    pageTitle: 'home.title',
   },
 };

@@ -14,6 +14,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
+import { BespokeModule } from 'app/bespoke/bespoke.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
@@ -21,9 +23,11 @@ import { ErrorComponent } from './layouts/error/error.component';
     ContactsSharedModule,
     ContactsCoreModule,
     ContactsHomeModule,
+    FontAwesomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     ContactsEntityModule,
     ContactsAppRoutingModule,
+    BespokeModule,
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent],
