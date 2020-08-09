@@ -6,7 +6,7 @@ import { LoginModalService } from 'app/core/login/login-modal.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'gha-data-table',
+  selector: 'jhi-data-table',
   templateUrl: './data-table.component.html',
   styleUrls: ['./data-table.component.scss'],
 })
