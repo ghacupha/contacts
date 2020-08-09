@@ -3,7 +3,7 @@ jib {
         image = "adoptopenjdk:11-jre-hotspot"
     }
     to {
-        image = "contacts:latest"
+        image = "ghacupha/contacts:0.0.1-SNAPSHOT"
     }
     container {
         entrypoint = ["bash", "-c", "/entrypoint.sh"]
