@@ -8,18 +8,20 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://contacts-postgresql:5432/contacts
+      #- SPRING_DATASOURCE_URL=jdbc:postgresql://contacts-postgresql:5432/contacts
+      - SPRING_DATASOURCE_URL=${LOCAL_PG_SERVER}/contacts
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
       - SPRING_DATA_JEST_URI=http://contacts-elasticsearch:9200
       - SPRING_ELASTICSEARCH_REST_URIS=http://contacts-elasticsearch:9200
       - PG_DATABASE_DEV_USER=${PG_DATABASE_DEV_USER}
       - PG_DATABASE_DEV_PASSWORD=${PG_DATABASE_DEV_PASSWORD}
+      - LOCAL_PG_SERVER=${LOCAL_PG_SERVER}
     ports:
       - 21000:21000
-  contacts-postgresql:
-    extends:
-      file: postgresql.yml
-      service: contacts-postgresql
+  #  contacts-postgresql:
+  #    extends:
+  #      file: postgresql.yml
+  #      service: contacts-postgresql
   contacts-elasticsearch:
     extends:
       file: elasticsearch.yml

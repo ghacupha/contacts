@@ -165,7 +165,7 @@ liquibase {
     activities {
         main {
             driver "org.postgresql.Driver"
-            url "jdbc:postgresql://localhost:21001/contacts"
+            url "$System.env.LOCAL_PG_SERVER"+"/contacts"
             username "$System.env.PG_DATABASE_DEV_USER"
             password "$System.env.PG_DATABASE_DEV_PASSWORD"
             changeLogFile "src/main/resources/config/liquibase/master.xml"
@@ -175,7 +175,7 @@ liquibase {
         }
         diffLog {
             driver "org.postgresql.Driver"
-            url "jdbc:postgresql://localhost:21001/contacts"
+            url "$System.env.LOCAL_PG_SERVER"+"/contacts"
             username "$System.env.PG_DATABASE_DEV_USER"
             password "$System.env.PG_DATABASE_DEV_PASSWORD"
             changeLogFile project.ext.diffChangelogFile
